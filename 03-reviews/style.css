@@ -1,0 +1,170 @@
+/*
+=============== 
+Global styles
+===============
+*/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+:root {
+  --text-primary: #222222;
+  --background: #f1f5f8;
+  --white: #ffffff;
+  --main: #4ba6e8;
+}
+
+h2 {
+  margin: 0;
+}
+
+body {
+  font-family: "Roboto";
+  color: var(--text-primary);
+  background-color: var(--background);
+  margin: 0;
+}
+
+button {
+  border: 0;
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+
+/*
+=============== 
+styles
+===============
+*/
+
+main {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  text-align: center;
+  width: 80vw;
+  max-width: 620px;
+}
+
+/* 타이틀 텍스트 */
+.title {
+  margin-bottom: 60px;
+}
+
+h2 {
+  font-family: "Roboto";
+  letter-spacing: 3px;
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.title-content {
+  margin: 0 auto;
+  width: 13%;
+  background-color: var(--main);
+  height: 4px;
+}
+
+/* article profile 이미지 */
+.img-container {
+  width: 160px;
+  height: 160px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+}
+
+.person-img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+}
+
+.img-container::before {
+  content: "\f10e";
+  z-index: 2;
+  color: white;
+  background-color: var(--main);
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 20px;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  transform: translateY(25%);
+}
+
+.img-container::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 8px;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: var(--main);
+}
+
+/* 나머지 article 텍스트 */
+.review {
+  background-color: white;
+  text-align: center;
+  padding: 24px;
+  border-radius: 2%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.name {
+  font-family: "Roboto";
+  font-weight: 700;
+  letter-spacing: 3px;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.job {
+  font-size: 14px;
+  color: var(--main);
+}
+
+.comment {
+  font-family: "Noto Sans";
+  color: gray;
+  font-size: 16px;
+}
+
+/* 버튼 */
+.btn-prev,
+.btn-next {
+  color: var(--main);
+  font-size: 20px;
+  margin: 0 10px;
+}
+
+.btn-random {
+  margin-top: 10px;
+  color: var(--main);
+  background-color: #ebf6ff;
+  padding: 4px 6px;
+  border: 2px solid var(--main);
+  border-radius: 6px;
+}
+
+.btn-random:hover {
+  background-color: var(--main);
+  color: white;
+  transition: 0.5s;
+}
