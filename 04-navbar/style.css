@@ -1,0 +1,133 @@
+/* 799이하부터 모바일 */
+
+/*
+=============== 
+Global styles
+===============
+*/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+:root {
+  --main-primary: #a9dbff;
+  --main-secondary: #49a6e8;
+  --text-primary: #303030;
+}
+
+body {
+  font-family: "Roboto";
+  color: var(--text-primary);
+  background-color: #f1f5f8;
+  margin: 0;
+}
+
+button {
+  border: 0;
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text);
+}
+
+/*
+=============== 
+styles
+===============
+*/
+
+header {
+  background-color: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0.5rem 1rem;
+  max-width: 80rem;
+}
+
+.menuBar,
+.menu-mobile,
+.menu-mobile.active {
+  display: none;
+}
+
+.menu,
+.sns {
+  display: flex;
+  gap: 1rem;
+}
+
+.menu,
+.menu-mobile {
+  font-family: "Noto Sans";
+  letter-spacing: 0.25rem;
+}
+
+.menu li:hover {
+  color: var(--main-secondary);
+  transition: 0.4s;
+}
+
+.sns {
+  color: var(--main-secondary);
+}
+
+img {
+  width: 13rem;
+}
+
+@media screen and (max-width: 800px) {
+  .menu,
+  .sns {
+    display: none;
+  }
+
+  .menuBar {
+    display: block;
+    font-size: 1.5rem;
+    color: var(--main-secondary);
+    cursor: pointer;
+  }
+
+  .menuBar:hover {
+    transform: rotate(90deg);
+    transition: 0.5s;
+    color: var(--text-primary);
+  }
+
+  .menu-mobile.active {
+    display: flex;
+    flex-direction: column;
+    padding-top: 0.2rem;
+  }
+
+  .menu-mobile.active li {
+    padding: 0.6rem 0;
+    padding-left: 1rem;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+
+  .menu-mobile.active li:hover {
+    background-color: var(--main-primary);
+    color: var(--main-secondary);
+    padding-left: 1.5rem;
+    transition: 0.4s;
+  }
+}
