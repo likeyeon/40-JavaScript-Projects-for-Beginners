@@ -1,0 +1,130 @@
+/* 799이하부터 모바일 */
+
+/*
+=============== 
+Global styles
+===============
+*/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+:root {
+  --main-primary: #a9dbff;
+  --main-secondary: #49a6e8;
+  --text-primary: #303030;
+}
+
+body {
+  font-family: "Roboto";
+  color: var(--text-primary);
+  background-color: #f1f5f8;
+  margin: 0;
+}
+
+button {
+  border: 0;
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text);
+}
+
+/*
+=============== 
+styles
+===============
+*/
+
+.menuBar {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-size: 2rem;
+  color: var(--main-secondary);
+  animation: scale_menuBar 2s ease-in-out infinite;
+  cursor: pointer;
+}
+
+@keyframes scale_menuBar {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.5);
+  }
+}
+
+nav {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  row-gap: 1rem;
+  z-index: 1;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: -25rem;
+  width: 25rem;
+  height: 100%;
+  transition: 0.5s;
+}
+
+.active {
+  left: 0;
+}
+
+.nav-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+}
+
+.close {
+  color: rgb(191, 0, 0);
+  font-size: 2rem;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+.close:hover {
+  transform: rotate(540deg);
+}
+
+.nav-menu {
+  margin-top: 1rem;
+}
+
+.nav-menu li {
+  color: #878787;
+  font-family: "Noto Sans";
+  font-size: 1.5rem;
+  padding: 1rem 1.5rem;
+}
+
+.nav-sns {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  color: var(--main-secondary);
+  font-size: 1.5rem;
+  padding-bottom: 2rem;
+}
+
+@media screen and (max-width: 676px) {
+  .active {
+    width: 100%;
+  }
+}
