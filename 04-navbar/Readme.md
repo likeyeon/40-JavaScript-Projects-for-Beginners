@@ -5,7 +5,6 @@
 - document.querySelector()
 - addEventListener()
 - classList.toggle()
-- classList.remove()
 
 ### ✅ 배운점
 - `toggle` : 토큰이 존재하면 토큰제거, 존재 하지 않으면 토큰을 추가해준다. (ex. 스마트폰 옆 소리 on/off 버튼)
