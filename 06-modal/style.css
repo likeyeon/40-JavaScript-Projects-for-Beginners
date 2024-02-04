@@ -1,0 +1,152 @@
+/* 799이하부터 모바일 */
+
+/*
+=============== 
+Global styles
+===============
+*/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700,800&display=swap");
+
+:root {
+  --main-primary: #a9dbff;
+  --main-secondary: #49a6e8;
+  --text-primary: #303030;
+}
+
+body {
+  font-family: "Roboto";
+  color: var(--text-primary);
+  background-color: #f1f5f8;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  border: 0;
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text);
+}
+
+/*
+=============== 
+styles
+===============
+*/
+
+.wrapper {
+  position: relative;
+  height: 100vh;
+  background-image: url("./hero.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box-wrapper {
+  text-align: center;
+  padding: 4rem 0;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  width: 90vw;
+  max-width: 40rem;
+}
+
+.box-content p {
+  font-size: 4rem;
+  font-weight: 800;
+  letter-spacing: 0.3rem;
+}
+
+.open {
+  background-color: var(--main-secondary);
+  color: white;
+  font-size: 0.9rem;
+  letter-spacing: 0.2rem;
+  padding: 0.5rem 0.8rem;
+  border-radius: 0.4rem;
+  margin-top: 2rem;
+}
+
+.modal-wrapper {
+  display: none;
+  background: rgba(73, 166, 233, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.modal-wrapper.active {
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  position: relative;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+  height: 30vh;
+  max-width: 40rem;
+  border-radius: 0.4rem;
+}
+
+.swiper {
+  height: 2rem;
+  margin: auto;
+}
+
+.swiper-slide {
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: 0.3rem;
+}
+
+.close {
+  font-size: 2rem;
+  color: rgb(183, 0, 0);
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+@media screen and (max-width: 676px) {
+  .box-content p {
+    font-size: 3rem;
+  }
+
+  .swiper {
+    height: 1.5rem;
+  }
+
+  .swiper-slide {
+    font-size: 1.2rem;
+    letter-spacing: 0.2rem;
+  }
+}
